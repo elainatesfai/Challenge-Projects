@@ -87,3 +87,14 @@
   align-items: center;
   transition: all 0.2s ease-in-out; 
 }
+
+.Btn:hover {
+  background: #fafafa;
+  font-size: 22px;
+  transition: 0.2s ease-in-out;
+}
+
+.BtnIconWrapper {
+  padding-left: 10px;
+  height: 100%;
+}

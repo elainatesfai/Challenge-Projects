@@ -1,10 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import {BsArrowDownCircleFill, BsArrowDownCircle} from 'react-icons/bs';
 
-
 import '../css/hero.css';
-
-import {Button} from './commonStructure/Button';
 
 const Hero = () => {
   const [hover, setHover] = useState(false)
@@ -21,16 +18,17 @@ const Hero = () => {
       </div>
       <div className='HeroContent'>
         <h1>Welcome to the first BTM Challenge Project!</h1>
-        <p>You will be learning how to code in javascript and css as well as be able to familirise yourselves with the react framework. This will massivelt help you in preparation for your second year group projects.</p>
+        <p>You will be learning how to code in javascript and css as well as be able to familirise yourselves with the react framework. This will massively help you in preparation for your second year group projects.</p>
         <div className='BtnWrapper'>
-          <Button
-            onMouseEnter={onHover} 
-            onMouseLeave={onHover}
-            BtnText='Get Started'
-            BtnIcon={hover?<BsArrowDownCircleFill/>:<BsArrowDownCircle/>}
-          />
+          <button className='Btn'
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}>
+            Get Started
+            <div className='BtnIconWrapper'>
+            {hover ? <BsArrowDownCircleFill/> : <BsArrowDownCircle/>}
+            </div>
+          </button>
         </div>
-
       </div>
     </div>
   )

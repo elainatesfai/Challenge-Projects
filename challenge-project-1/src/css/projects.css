@@ -1,0 +1,43 @@
+
+.MP1Container {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.BriefContainer {
+    margin: 10px 150px 0px 150px;
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.TextContainer {
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.TextContainer h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.TextContainer p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #9a9a9a;
+    padding-bottom: 15px;
+}
