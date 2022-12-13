@@ -8,8 +8,7 @@ const Hero = () => {
 
   const onHover = () => {
       setHover(!hover)
-
-  }
+  };
 
   return (
     <div className='HeroContainer'>
@@ -18,7 +17,7 @@ const Hero = () => {
       </div>
       <div className='HeroContent'>
         <h1>Welcome to the first BTM Challenge Project!</h1>
-        <p>You will be learning how to code in javascript and css as well as be able to familirise yourselves with the react framework. This will massively help you in preparation for your second year group projects.</p>
+        <p>You will be learning how to code in javascript and css as well as be able to familirise yourselves with the react framework.</p>
         <div className='BtnWrapper'>
           <button className='Btn'
             onMouseEnter={onHover}

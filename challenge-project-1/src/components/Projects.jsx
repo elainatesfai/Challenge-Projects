@@ -1,16 +1,67 @@
-import React from 'react'
+import React from 'react';
+import {routes, route, useNavigate} from 'react-router-dom';
+import '../css/projects.css';
+import QA from '../pages/QA';
+import TBL from '../pages/TBL';
+import TLS from '../pages/TLS';
 
-function MP1() {
+function Projects() {
+
+  const navigate = useNavigate();
+
+  const navigateToTrafficLights = () => {
+    navigate('./tls');
+  };
+
+  const navigateToQA = () => {
+    navigate('/q&a');
+  };
+
+  const navigateToTBL = () => {
+    navigate('/tbl');
+  };
+ 
+
   return (
-    <div className='MP1Container'>
-        <div className='BriefContainer'>
-           <div className='TextContainer'>
-            <h1>Mini Project #1 - Calculator</h1>
-            <p>As a customer, I would like to purchase a calculator web application POC (Proof Of Concept). I have attached below an image of what sort of format I want. Your job is to implement my design with no functionality of a calcaluator yet </p>
-           </div>
+    <div className='ProjectsContainer'>
+      <div className='ProjectsTextContainer'>
+          <h1>Our Projects</h1>
+          <p>We have decomposed this much larger project into three distinct areas. These are:</p>
+      </div>
+      <div className='ProjectsContent'>
+
+        {/* Traffic Light Project Card */}
+        <button className='ProjectCard' onClick={navigateToTrafficLights}>
+          <div className='ProjectCardIcon'>
+            <i class='fas fa-traffic-light' />
+          </div>
+          <div className='ProjectCardTitle'>
+            Traffic Light System
+          </div>
+        </button>
+
+        {/* Q&A Project Card */}
+        <button className='ProjectCard' onClick={navigateToQA}>
+          <div className='ProjectCardIcon'>
+            <i class='fas fa-clipboard-question' />
+          </div>
+          <div className='ProjectCardTitle'>
+            Live Q&A
+          </div>
+        </button>
+
+        {/* Team-based Learning Project Card */}
+        <button className='ProjectCard' onClick={navigateToTBL}>
+          <div className='ProjectCardIcon'>
+            <i class='fas fa-people-group' />
+          </div>
+          <div className='ProjectCardTitle'>
+            Team-based Learning
+          </div>
+        </button>
         </div>
     </div>
   )
 }
 
-export default MP1
+export default Projects

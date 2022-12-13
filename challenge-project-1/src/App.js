@@ -1,15 +1,21 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Projects from './components/Projects';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import TLS from './pages/TLS';
+import QA from './pages/QA';
+import TBL from './pages/TBL';
 
 function App() {
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <Projects/>
-    </>
+    <Router>
+       <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/tls' element={<TLS />} />
+          <Route path='/qa' element={<QA />} />
+          <Route path='/tbl' element={<TBL />} />
+       </Routes>
+
+    </Router>
   );
 }
 

@@ -1,79 +1,77 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from 'react';
+import { HiMenuAlt4 } from 'react-icons/hi';
+import { RiCloseLine } from 'react-icons/ri';
 import '../css/navbar.css';
 
-function Navbar() {
-    const [toggle, setToggle] = useState(false);
-    const [active, setActive] = useState("home");
-    const [scrollUp, setScrollUp] = useState(false);
-   
-    const handleNavToggle = () => {
-      const state = toggle;
-      setToggle(!state);
-    };
-   
-    const handleNavItemClick = (item ) => {
-      handleNavToggle();
-      handleScroll(item);
-    };
-   
-    const scroll = useCallback(() => {
-      document.addEventListener("scroll", () => {
-        const navArray = [
-          "home",
-          "about",
-          "...",
-          "...",
-        ];
-   
-        if (window.pageYOffset > 300) {
-          setScrollUp(true);
-        } else setScrollUp(false);
-   
-        navArray.forEach(async (element) => {
-   
-          if (window.innerHeight < 500) setActive("home");
-          if (window.innerHeight > (await getPos(element)))
-   
-  
-            setActive(element);
-        });
-      });
-    }, []);
-   
-    useEffect(() => {
-      scroll();
-    }, [scroll]);
-   
-    const getPos = async (id) => {
-      const element = await document.getElementById(id);
-      const elementPosition = element.getBoundingClientRect().bottom;
-   
-      return elementPosition;
-    };
-   
-    const handleScroll = (id) => {
-      const element = document.getElementById(id);
-      const elementPosition = element.getBoundingClientRect().top;
-      setActive(id);
-   
-      window.scrollBy({
-        top: elementPosition - 60,
-        behavior: "smooth"
-      });
-    };
+export default function Navbar() {
+
+  // to change burger classes
+  const setBurgerClass = useState("BurgerBar unclicked")
+  const setMenuClass = useState("DropdownMenu hidden")
+  const [isMenuClicked, setIsMenuClicked] = useState(false)
+
+  // toggle burger DropdownMenu change
+  const updateMenu = () => {
+    if(!isMenuClicked) {
+      setBurgerClass('BurgerBar clicked')
+      setMenuClass('DropdownMenu visible')
+    }
+    else {
+      setBurgerClass('BurgerBar unclicked')
+      setMenuClass('DropdownMenu hidden')
+    }
+  }
+
   return (
-    <div className='Nav'>
-      <div className='NavbarContainer'>
-        <div className='NavLogo'>
-            <img className='NavImg' src='../assets/images/Logo.png'/>
-            BTM
-        </div>
-        <div className='NavMenu'>
+    <>
+      <div className='Nav'>
+        <div className='NavContainer'>
+          
+          <div className='Item'>
+                Home
+            </div>
+            <div className='Item'>
+                Traffic Light System
+            </div>
+            <div className='Item'>
             
+            </div>
+            <div className='Item'>
+                Live Q&A
+            </div>
+            <div className='Item'>
+                Team-based Learning
+            </div>
+          </div>
+          <div className='Logo' >
+              <div className='LogoWrapper'>
+                <img className='Img' src='../assets/Images/Logo-modified.png' alt='' />
+              </div>
+            </div>
+            {/* <div className='MobileIcon' onClick={() => setIsMenuClicked(!isMenuClicked)}>
+              {(isMenuClicked?<HiMenuAlt4/>:<RiCloseLine/>)}
+            </div> */}
+
+            <div className='MobileIcon' onClick={() => updateMenu(setIsMenuClicked(!isMenuClicked))}>
+              {(isMenuClicked?<RiCloseLine/>:<HiMenuAlt4/>)}
+            </div>
         </div>
-      </div>
-    </div>
+        <div className={(isMenuClicked?'DropdownMenu':'DropdownMenuHidden')}>
+          <div className='DropdownMenuList'>
+            <div className='DropdownMenuItem'>
+              Home
+            </div>
+            <div className='DropdownMenuItem'>
+              Traffic Light System
+            </div>
+            <div className='DropdownMenuItem'>
+              Live Q&A
+            </div>
+            <div className='DropdownMenuItem'>
+              Team-based Learning
+            </div>
+          </div>
+        </div>
+      </>
   )
 }
-
-export default Navbar

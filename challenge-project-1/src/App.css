@@ -1,6 +1,6 @@
 :root {
   --primary: #16214C;
-  --secondary: #00325b;
+  --secondary: #273362;
   --dark: #373e47;
   --light: #9a9a9a;
   --white: #f7f7f7;
@@ -23,5 +23,7 @@ body {
   font-family: 'Encode Sans Expanded',
   sans-serif;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
