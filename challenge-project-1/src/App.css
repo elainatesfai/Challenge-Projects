@@ -20,8 +20,10 @@ html {
 }
 
 body {
-  font-family: 'Encode Sans Expanded',
-  sans-serif;
+  /* font-family: 'Encode Sans Expanded',
+  sans-serif; */
+  font-family: 'Monserrat',
+  sans-serif; 
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

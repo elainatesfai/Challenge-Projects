@@ -1,0 +1,50 @@
+
+.FooterContainer {
+    background-color: var(--primary);
+	padding: 4rem 0 2rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.FooterSocialMedia {
+    max-width: 1000px;
+	width: 100%;
+}
+
+.FooterSocialMediaWrap {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 0 auto;
+}
+
+.FooterLogo {
+    color: #fff;
+	justify-self: start;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.FooterLogo img {
+    font-size: 3rem;
+}
+
+.FooterWebsiteRights {
+    color: #fff;
+	margin-bottom: 16px;
+}
+
+.FooterSocialIcons {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 240px;
+}
