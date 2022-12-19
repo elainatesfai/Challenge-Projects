@@ -1,9 +1,30 @@
 import React, { useState } from 'react';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { RiCloseLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 import '../css/navbar.css';
 
 export default function Navbar() {
+
+  // to navigate using navbar
+
+  const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate('/');
+  };
+
+  const navigateToTrafficLights = () => {
+    navigate('/tls');
+  };
+
+  const navigateToQA = () => {
+    navigate('/q&a');
+  };
+
+  const navigateToTBL = () => {
+    navigate('/tbl');
+  };
 
   // to change burger classes
   const setBurgerClass = useState("BurgerBar unclicked")
@@ -27,19 +48,19 @@ export default function Navbar() {
       <div className='Nav'>
         <div className='NavContainer'>
           
-          <div className='Item'>
+          <div className='Item' onClick={navigateToHome}>
                 Home
             </div>
-            <div className='Item'>
+            <div className='Item' onClick={navigateToTrafficLights}>
                 Traffic Light System
             </div>
             <div className='Item'>
             
             </div>
-            <div className='Item'>
+            <div className='Item' onClick={navigateToQA}>
                 Live Q&A
             </div>
-            <div className='Item'>
+            <div className='Item' onClick={navigateToTBL}>
                 Team-based Learning
             </div>
           </div>
@@ -58,16 +79,16 @@ export default function Navbar() {
         </div>
         <div className={(isMenuClicked?'DropdownMenu':'DropdownMenuHidden')}>
           <div className='DropdownMenuList'>
-            <div className='DropdownMenuItem'>
+            <div className='DropdownMenuItem' onClick={navigateToHome}>
               Home
             </div>
-            <div className='DropdownMenuItem'>
+            <div className='DropdownMenuItem' onClick={navigateToTrafficLights}>
               Traffic Light System
             </div>
-            <div className='DropdownMenuItem'>
+            <div className='DropdownMenuItem' onClick={navigateToQA}>
               Live Q&A
             </div>
-            <div className='DropdownMenuItem'>
+            <div className='DropdownMenuItem' onClick={navigateToTBL}>
               Team-based Learning
             </div>
           </div>

@@ -1,50 +1,17 @@
 
 .FooterContainer {
+	/* margin-top: 50px; */
     background-color: var(--primary);
-	padding: 4rem 0 2rem 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.FooterSocialMedia {
-    max-width: 1000px;
+	height: 120px;
 	width: 100%;
-}
-
-.FooterSocialMediaWrap {
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 90%;
-	max-width: 1000px;
-	margin: 40px auto 0 auto;
-}
-
-.FooterLogo {
-    color: #fff;
-	justify-self: start;
-	cursor: pointer;
-	text-decoration: none;
-	font-size: 2rem;
+	top: 0;
 	display: flex;
-	align-items: center;
-	margin-bottom: 16px;
-}
-
-.FooterLogo img {
-    font-size: 3rem;
+	align-items: flex-end;
 }
 
 .FooterWebsiteRights {
     color: #fff;
-	margin-bottom: 16px;
-}
-
-.FooterSocialIcons {
-    display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 240px;
+	display: flex;
+	align-self: center;
+	text-align: center;
 }

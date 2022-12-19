@@ -5,7 +5,7 @@ function QA() {
   return (
     <>
       <Navbar />
-      THIS IS QUESTION AND ANSWER
+      THIS IS LIVE Q&A
     </>
   )
 }

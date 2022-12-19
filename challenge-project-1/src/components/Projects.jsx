@@ -1,9 +1,6 @@
 import React from 'react';
-import {routes, route, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../css/projects.css';
-import QA from '../pages/QA';
-import TBL from '../pages/TBL';
-import TLS from '../pages/TLS';
 
 function Projects() {
 
