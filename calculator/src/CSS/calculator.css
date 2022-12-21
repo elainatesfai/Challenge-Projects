@@ -1,0 +1,26 @@
+.calculator-container {
+    margin: 60px auto;
+    width: 500px;
+    border: 1px solid black;
+    height: 600px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-container {
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid black;
+    margin: 20px;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
+.buttons-container {
+    margin: 0 20px;
+}
+
+.button {
+
+}
