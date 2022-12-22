@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   const navigateToQA = () => {
-    navigate('/q&a');
+    navigate('/qa');
   };
 
   const navigateToTBL = () => {
