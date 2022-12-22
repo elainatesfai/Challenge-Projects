@@ -1,11 +1,14 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import '../css/qa.css'
 
 function QA() {
   return (
     <>
-      <Navbar />
-      THIS IS LIVE Q&A
+      {/* <Navbar /> */}
+      <div className='title'>
+        This is live Q&A
+      </div>
     </>
   )
 }
