@@ -1,2 +1,6 @@
-.title {
+.qa-container {
+    background-color: #D6F0FFED;
+    padding: 100px 0 20px;
+    display: flex;
+    justify-content: center;
 }

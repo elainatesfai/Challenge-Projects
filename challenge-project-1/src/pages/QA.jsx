@@ -1,13 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import '../css/qa.css'
+import QAQuestion from '../components/Common Components/QAQuestion'
 
 function QA() {
   return (
     <>
       <Navbar />
-      <div className='title'>
-        This is live Q&A
+      <div className='qa-container'>
+        <QAQuestion 
+        question="Question"/>
       </div>
     </>
   )
