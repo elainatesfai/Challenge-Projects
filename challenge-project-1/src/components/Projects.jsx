@@ -11,7 +11,7 @@ function Projects() {
   };
 
   const navigateToQA = () => {
-    navigate('/q&a');
+    navigate('/qa');
   };
 
   const navigateToTBL = () => {

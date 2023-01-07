@@ -5,7 +5,7 @@ import '../css/qa.css'
 function QA() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className='title'>
         This is live Q&A
       </div>
